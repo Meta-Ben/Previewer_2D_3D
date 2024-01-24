@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhk67yf2d7ixi"]
+
+[ext_resource type="Script" path="res://addons/Previewer_2D_3D/Previewer2D3D_OnOff.gd" id="1_138vt"]
+
+[node name="Previewer2d3dOnOff" type="Control"]
+custom_minimum_size = Vector2(300, 2.08165e-12)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1620.0
+offset_bottom = -1046.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_138vt")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Previewer 2D/3D"
+
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuibvk4ffcht6"]
+
+[ext_resource type="Script" path="res://addons/Previewer_2D_3D/Previewer2D3D.gd" id="1_4gyua"]
+[ext_resource type="Texture2D" uid="uid://bx5b5pehranab" path="res://addons/Previewer_2D_3D/Icons/option.png" id="2_nerf3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q3rui"]
+load_path = "res://.godot/imported/left.png-a60ec8a30bd45585cb988a69d945e60b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8crud"]
+load_path = "res://.godot/imported/right.png-9cc6d7d936785b805dc429437a2f4ab7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8di4p"]
+load_path = "res://.godot/imported/botom.png-80a435593c6bac454efb141a994fa9d3.ctex"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b6fjb"]
+viewport_path = NodePath("Container/PreviewContainer/2D_Viewport")
+
+[node name="Preview" type="Control"]
+z_index = 999
+custom_minimum_size = Vector2(640, 300)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1280.0
+offset_bottom = 1078.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4gyua")
+metadata/_edit_vertical_guides_ = [-577.0, -313.0, -209.0]
+
+[node name="Container" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsContainer" type="MarginContainer" parent="Container"]
+custom_minimum_size = Vector2(640, 0)
+layout_direction = 2
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Container/OptionsContainer"]
+clip_contents = true
+layout_mode = 2
+text = "2D Preview"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/OptionsContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="MenuButton" type="MenuButton" parent="Container/OptionsContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_nerf3")
+flat = false
+clip_text = true
+item_count = 3
+popup/item_0/text = "Left"
+popup/item_0/icon = SubResource("CompressedTexture2D_q3rui")
+popup/item_0/id = 0
+popup/item_1/text = "Right"
+popup/item_1/icon = SubResource("CompressedTexture2D_8crud")
+popup/item_1/id = 1
+popup/item_2/text = "Bottom"
+popup/item_2/icon = SubResource("CompressedTexture2D_8di4p")
+popup/item_2/id = 2
+
+[node name="PreviewContainer" type="ColorRect" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 6
+color = Color(0.301961, 0.301961, 0.301961, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Container/PreviewContainer"]
+custom_minimum_size = Vector2(0, 2.08165e-12)
+layout_mode = 2
+offset_right = 640.0
+offset_bottom = 2158.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_b6fjb")
+stretch_mode = 6
+
+[node name="3D_Viewport" type="SubViewport" parent="Container/PreviewContainer"]
+transparent_bg = true
+
+[node name="Current_Viewport" type="SubViewport" parent="Container/PreviewContainer"]
+transparent_bg = true
+handle_input_locally = false
+
+[node name="2D_Viewport" type="SubViewport" parent="Container/PreviewContainer"]
+transparent_bg = true
+size = Vector2i(640, 2158)
+render_target_update_mode = 4
+
+[connection signal="gui_input" from="Container/PreviewContainer" to="." method="_on_preview_container_gui_input"]
