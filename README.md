@@ -9,12 +9,6 @@
     <a href="https://godotengine.org/download/archive/4.2.1-stable/"> 
         <img src="https://img.shields.io/badge/Godot%204--2--1-Godot%204--2--1?style=for-the-badge&logo=godot-engine&logoColor=white&label=Godot%20version&color=26476D">
     </a>
-    <a href="https://twitter.com/Amealky_Padlynn"> 
-        <img src="https://img.shields.io/badge/Follow%20us-Follow%20us?style=for-the-badge&logo=twitter&logoColor=white&label=Amealky%26Padlynn&color=1a8cd8">
-    </a>
-    <a href="https://amealky-padlynn.itch.io/"> 
-        <img src="https://img.shields.io/badge/Itch--io-itch--io?style=for-the-badge&logo=itch.io&logoColor=white&label=Amealky%26Padlynn&color=FA5C5C">
-    </a>
 </p>
 
 [If you just want to know how to install it ! ⬅️](#📦-how-to-install)
