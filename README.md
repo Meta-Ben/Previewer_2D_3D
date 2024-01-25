@@ -11,7 +11,7 @@
     </a>
 </p>
 
-[If you just want to know how to install it ! ⬅️](#📦-how-to-install)
+[If you just want to know how to install it ! ⬅️](#📃-how-to-install)
 
 > **NOTE :** The Previewer_2D_3D is actually in very early development, and may experiment malfunction or bug, if you want to help us and/or participate on improving this plugin don't hesitate to open a PR 📥
 
