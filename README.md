@@ -41,7 +41,7 @@ It could be really useful for game that use 3D as physic engine but 2D as render
 6 - ( Bonus ) Work in full screen edition  :
 
 <p align="center">
-    <img src="https://i.ibb.co/SrPQfrx/Capture-d-e-cran-2024-01-24-a-22-30-02.png">
+    <img src="https://i.ibb.co/RSbpkvz/Capture-d-e-cran-2024-01-24-a-22-30-02-ezgif-com-resize.png">
 </p>
 
 
