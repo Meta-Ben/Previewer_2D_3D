@@ -12,8 +12,8 @@ load_path = "res://.godot/imported/right.png-9cc6d7d936785b805dc429437a2f4ab7.ct
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8di4p"]
 load_path = "res://.godot/imported/botom.png-80a435593c6bac454efb141a994fa9d3.ctex"
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_b6fjb"]
-viewport_path = NodePath("Container/PreviewContainer/2D_Viewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_ffsvy"]
+viewport_path = NodePath("Container/PreviewContainer/Current_Viewport")
 
 [node name="Preview" type="Control"]
 z_index = 999
@@ -22,7 +22,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1280.0
+offset_left = -384.0
+offset_right = -896.0
 offset_bottom = 1078.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -61,7 +62,6 @@ clip_text = true
 item_count = 3
 popup/item_0/text = "Left"
 popup/item_0/icon = SubResource("CompressedTexture2D_q3rui")
-popup/item_0/id = 0
 popup/item_1/text = "Right"
 popup/item_1/icon = SubResource("CompressedTexture2D_8crud")
 popup/item_1/id = 1
@@ -82,7 +82,7 @@ offset_right = 640.0
 offset_bottom = 2158.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("ViewportTexture_b6fjb")
+texture = SubResource("ViewportTexture_ffsvy")
 stretch_mode = 6
 
 [node name="3D_Viewport" type="SubViewport" parent="Container/PreviewContainer"]
@@ -90,11 +90,10 @@ transparent_bg = true
 
 [node name="Current_Viewport" type="SubViewport" parent="Container/PreviewContainer"]
 transparent_bg = true
-handle_input_locally = false
 
 [node name="2D_Viewport" type="SubViewport" parent="Container/PreviewContainer"]
 transparent_bg = true
-size = Vector2i(640, 2158)
+size = Vector2i(640, 1726)
 render_target_update_mode = 4
 
 [connection signal="gui_input" from="Container/PreviewContainer" to="." method="_on_preview_container_gui_input"]
