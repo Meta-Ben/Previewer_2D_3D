@@ -78,10 +78,9 @@ func _setup_viewports():
 		pass
 	
 	#UPDATE_ALWAYS allow us to modify the viewport even if the view it refer is no more visible
-	current_subviewport.render_target_update_mode = SubViewport.UPDATE_WHEN_VISIBLE
+	current_subviewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	current_subviewport.size.y = size.y
 	current_subviewport.size.x = size.x
-	
 	subviewport_texture.texture = current_subviewport.get_texture()
 	subviewport_texture.size.x = size.x
 	
@@ -201,4 +200,3 @@ func _on_preview_container_gui_input(event):
 			_manage_zoom_out()
 			pass
 	pass # Replace with function body.
-
