@@ -46,6 +46,9 @@ func _ready():
 	await get_tree().process_frame
 	#Set starting size
 	size.x = 640
+	#Update control nodes to fit project resolution
+	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	subviewport_texture.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	pass # Replace with function body.
 
 
