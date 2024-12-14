@@ -39,7 +39,6 @@ func switch_preview(preview_mode : int, preview_size : Vector2) -> void:
 		Previewer2D3D_Enums.PreviewMode.PREVIEW_3D:
 			current_subviewport = subviewport_3D
 			subviewport_3D = EditorInterface.get_editor_viewport_3d()
-			#subviewport_3D.size = EditorInterface.get_editor_viewport_3d().size
 			get_parent().split_offset = ((get_parent_control().size.x - preview_size.x) - godot_split_size)
 			#Disable 3D subviewport stretch
 			EditorInterface.get_editor_viewport_3d().get_parent().stretch = false

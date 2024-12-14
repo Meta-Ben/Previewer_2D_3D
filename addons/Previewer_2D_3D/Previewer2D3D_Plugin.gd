@@ -60,7 +60,6 @@ func _on_main_screen_changed(screen_name : String):
 			remove_control_from_container(CONTAINER_SPATIAL_EDITOR_MENU, previewer_on_off_instance)
 			add_control_to_container(CONTAINER_CANVAS_EDITOR_MENU, previewer_on_off_instance)
 			var preview_size : Vector2 = EditorInterface.get_editor_viewport_3d().size
-			#print(preview_size)
 			preview_instance.switch_preview(Previewer2D3D_Enums.PreviewMode.PREVIEW_3D, preview_size)
 		"3D":
 			#Switching from to native 3D view (faux 2D preview pane)...
@@ -69,7 +68,6 @@ func _on_main_screen_changed(screen_name : String):
 			remove_control_from_container(CONTAINER_CANVAS_EDITOR_MENU, previewer_on_off_instance)
 			add_control_to_container(CONTAINER_SPATIAL_EDITOR_MENU, previewer_on_off_instance)
 			var preview_size : Vector2 = EditorInterface.get_editor_viewport_2d().size
-			#print(preview_size)
 			preview_instance.switch_preview(Previewer2D3D_Enums.PreviewMode.PREVIEW_2D, preview_size)
 	#Update variable
 	current_editor_view = screen_name
