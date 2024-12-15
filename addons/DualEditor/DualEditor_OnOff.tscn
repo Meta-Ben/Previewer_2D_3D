@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhk67yf2d7ixi"]
 
-[ext_resource type="Script" path="res://addons/Previewer_2D_3D/Previewer2D3D_OnOff.gd" id="1_138vt"]
+[ext_resource type="Script" path="res://addons/DualEditor/DualEditor_OnOff.gd" id="1_7g5ul"]
 
-[node name="Previewer2d3dOnOff" type="HBoxContainer" node_paths=PackedStringArray("toggle_button")]
+[node name="DualEditorOnOff" type="HBoxContainer" node_paths=PackedStringArray("toggle_button")]
 offset_right = 143.0
 offset_bottom = 31.0
-script = ExtResource("1_138vt")
+script = ExtResource("1_7g5ul")
 toggle_button = NodePath("CheckButton")
 
 [node name="CheckButton" type="CheckButton" parent="."]
