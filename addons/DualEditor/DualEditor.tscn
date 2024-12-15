@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cuibvk4ffcht6"]
 
-[ext_resource type="Script" path="res://addons/Previewer_2D_3D/Previewer2D3D.gd" id="1_4gyua"]
+[ext_resource type="Script" path="res://addons/DualEditor/DualEditor.gd" id="1_1le1k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtmcs"]
 
-[node name="Preview" type="PanelContainer"]
+[node name="DualEditor" type="PanelContainer"]
 z_index = 999
 clip_contents = true
 anchors_preset = 15
@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vtmcs")
-script = ExtResource("1_4gyua")
+script = ExtResource("1_1le1k")
 metadata/_edit_vertical_guides_ = [-577.0, -313.0, -209.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
